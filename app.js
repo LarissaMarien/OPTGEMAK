@@ -22,5 +22,13 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
+app.get('/map', function(req, res){
+  res.render('map');
+});
+
+app.get('/toiletdetail', function(req, res){
+  res.render('toiletdetail');
+});
+
 //app naar port laten luisteren
 app.listen(port);
