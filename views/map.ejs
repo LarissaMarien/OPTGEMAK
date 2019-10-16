@@ -9,19 +9,21 @@
 <h1>Kaartje</h1>
 
 <div id="map">
-  <script>
-    <% for(var i=0; i < toiletten.length; i++) { %>
-            L.marker([<%-toiletten[i].Y_COORD %>, <%-toiletten[i].X_COORD %>]).addTo(map)
-                .bindPopup("<%- toiletten[i].attributes.CATEGORIE%>")
-            <% } %>
 
-  </script>
 </div>
 
 
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
 <script src="/js/map.js"></script>
+<script>
 
+  <% for(var i=0; i < toiletten.length; i++) { %>
+
+          L.marker([<%-toiletten[i].geometry.y %>, <%-toiletten[i].geometry.x %>]).addTo(map)
+              .bindPopup("<%- toiletten[i].attributes.CATEGORIE%>")
+          <% } %>
+
+</script>
 
 
 
