@@ -45,7 +45,7 @@ app.get('/lijst', function(req, res){
 
 app.get('/toiletdetail/:toiletid', function(req, res){
   res.render('detail', {
-    toilet: data_toiletten[req.params.i]
+    toilet: data_toiletten[req.params.toiletid]
   });
 });
 
