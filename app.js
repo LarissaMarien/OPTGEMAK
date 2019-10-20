@@ -25,14 +25,28 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
+app.get('/toiletten/:toiletid', function(req, res){
+  res.render('detail', {
+    toilet: data_toiletten[req.params.toiletid]
+  });
+});
+
 app.get('/map', function(req, res){
   res.render('map', {
     toiletten: data_toiletten
   });
 });
 
-app.get('/toiletdetail', function(req, res){
-  res.render('toiletdetail');
+app.get('/lijst', function(req, res){
+  res.render('lijst', {
+    toiletten: data_toiletten
+  });
+});
+
+app.get('/toiletdetail/:toiletid', function(req, res){
+  res.render('detail', {
+    toilet: data_toiletten[req.params.i]
+  });
 });
 
 //app naar port laten luisteren
@@ -42,10 +56,6 @@ request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_pu
   function(error, response, body){
     data_toiletten = JSON.parse(body);
     data_toiletten = data_toiletten.features;
-
-    for(var i=0; i < data_toiletten.length; i++) {
-        console.log("naam: " + data_toiletten[i].attributes.OMSCHRIJVING);
-    }
 
   }
 );

@@ -1,0 +1,23 @@
+<% include header %>
+<% include nav %>
+<link rel="stylesheet" href="/css/style.css">
+
+
+<h1>Lijst met toiletten</h1>
+  <div class="list">
+  <%
+    var toiletLijst = toiletten.length;
+    for(var toiletIndex=0; toiletIndex<toiletLijst; toiletIndex++) {
+  %>
+
+
+      <section>
+        <% var toilet = toiletten[toiletIndex] %>
+        <% include toiletdetail %>
+      </section>
+
+  <%
+    }
+  %>
+
+<% include footer %>

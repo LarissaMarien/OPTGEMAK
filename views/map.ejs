@@ -17,10 +17,10 @@
 <script src="/js/map.js"></script>
 <script>
 
-  <% for(var i=0; i < toiletten.length; i++) { %>
+  <% for(var toiletIndex=0; toiletIndex < toiletten.length; toiletIndex++) { %>
 
-          L.marker([<%-toiletten[i].geometry.y %>, <%-toiletten[i].geometry.x %>]).addTo(map)
-              .bindPopup("<%- toiletten[i].attributes.CATEGORIE%>")
+          L.marker([<%-toiletten[toiletIndex].geometry.y %>, <%-toiletten[toiletIndex].geometry.x %>]).addTo(map)
+              .bindPopup("<p class='popuptext'> Toilet: "+"<%- toiletten[toiletIndex].attributes.OMSCHRIJVING%></p><a class='leesmeer' href='/toiletten/<%=toiletIndex%>'>Lees meer over deze toilet hier!</a>")
           <% } %>
 
 </script>
