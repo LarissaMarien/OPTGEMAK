@@ -8,8 +8,13 @@ var request = require('request');
 //bib inladen om paden te maken naar folder
 const path = require ('path');
 
-//om browser te doen werken = applicatie poort instellen
-const port = 3000;
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+//app naar port laten luisteren
+app.listen(port);
 
 //hiermee kan je de map views mee ophalen met /views
 app.set('view engine','ejs');
