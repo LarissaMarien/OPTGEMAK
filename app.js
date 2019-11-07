@@ -54,8 +54,7 @@ app.get('/toiletdetail/:toiletid', function(req, res){
   });
 });
 
-//app naar port laten luisteren
-app.listen(port);
+
 
 request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_publiek1/MapServer/8/query?where=1%3D1&outFields=OBJECTID,ID,OBDD,CATEGORIE,PUBLICEREN,PRIORITAIR,OMSCHRIJVING,EXTRA_INFO_PUBLIEK,VRIJSTAAND,TYPE,STADSEIGENDOM,BETALEND,STRAAT,HUISNUMMER,POSTCODE,DISTRICT,BEHEERDER,CONTACTPERSOON,CONTACTGEGEVENS,VERMELDING,DOELGROEP,INTEGRAAL_TOEGANKELIJK,GESCREEND,LUIERTAFEL,OPENINGSUREN_OPM,OPM_INTERN,LAT,LONG,X_COORD,Y_COORD,SHAPE&outSR=4326&f=json',
   function(error, response, body){
