@@ -13,7 +13,7 @@ function onLocationFound(e) {
 	L.marker(e.latlng).addTo(map)
 		.bindPopup("Je bent hier!").openPopup();
 
-  L.circle(e.latlng).setRadius(500).addTo(map).bindPopup("De cirkel heeft een radius van 1KM").click();
+  L.circle(e.latlng).setRadius(500).addTo(map).bindPopup("De cirkel heeft een radius van 1KM");
 }
 
 map.on('locationfound', onLocationFound);

@@ -7,7 +7,7 @@ var iso = new Isotope( '.grid', {
 });
 
 // filter functions
-var filterFns = {
+/*var filterFns = {
   // show if
   gehandicapt: function( itemElem ) {
     var gehandicapt = itemElem.querySelector('.gehandicapt').textContent;
@@ -25,7 +25,7 @@ var filterFns = {
     var luier = itemElem.querySelector('.luier').textContent;
     return luier.match( / ja$/ );
   }
-};
+};*/
 
 // bind filter button click
 var filtersElem = document.querySelector('.filters-button-group');
@@ -36,7 +36,7 @@ filtersElem.addEventListener( 'click', function( event ) {
   }
   var filterValue = event.target.getAttribute('data-filter');
   // use matching filter function
-  filterValue = filterFns[ filterValue ] || filterValue;
+  //filterValue = filterFns[ filterValue ] || filterValue;
   iso.arrange({ filter: filterValue });
 });
 
