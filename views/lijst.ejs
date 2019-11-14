@@ -13,8 +13,8 @@
       <button class="button is-checked" data-filter="*">Show all</button>
       <button class="button" data-filter=".man">Mannen</button>
       <button class="button" data-filter=".vrouw">Vrouwen</button>
-      <button class="button" data-filter=".gehandicapt">Gehandicapt</button>
-      <button class="button" data-filter=".luier">Luiertafel</button>
+      <button class="button" data-filter=".handicap">Gehandicapt</button>
+      <button class="button" data-filter=".luiertafel">Luiertafel</button>
     </div>
 
     <div class="grid">
@@ -23,15 +23,36 @@
     var toiletLijst = toiletten.length;
     for(var toiletIndex=0; toiletIndex<toiletLijst; toiletIndex++) {
   %>
- 
-          <div class="element-item" data-category="">
+
+          <div class="element-item">
 
             <% var toilet = toiletten[toiletIndex] %>
-            <p class="naam"><%=toilet.attributes.OMSCHRIJVING %></p>
-            <p id="noshow" class="man"><%=toilet.attributes.DOELGROEP %></p>
-            <p id="noshow" class="vrouw"><%=toilet.attributes.DOELGROEP %></p>
-            <p id="noshow" class="gehandicapt"><%=toilet.attributes.INTEGRAAL_TOEGANKELIJK %></p>
-            <p id="noshow" class="luier"><%=toilet.attributes.LUIERTAFEL %></p>
+
+            <%
+            let classes;
+              if (toilet.attributes.INTEGRAAL_TOEGANKELIJK == "ja") {
+                classes += " handicap ";
+              }
+              if (toilet.attributes.DOELGROEP == "man" ) {
+                classes += " man ";
+              }
+              if (toilet.attributes.DOELGROEP == "vrouw" ) {
+                classes += " vrouw ";
+              }
+              if (toilet.attributes.DOELGROEP == "man/vrouw" ) {
+                classes += " man vrouw ";
+              }
+              if (toilet.attributes.LUIERTAFEL == "ja" ) {
+                classes += " luiertafel ";
+              }
+            %>
+
+
+            <p class=" <%=classes%>"><%=toilet.attributes.OMSCHRIJVING %></p>
+            <p class=" <%=classes%>"><%=toilet.attributes.DOELGROEP %></p>
+            <p class=" <%=classes%>"><%=toilet.attributes.DOELGROEP %></p>
+            <p class=" <%=classes%>"><%=toilet.attributes.INTEGRAAL_TOEGANKELIJK %></p>
+            <p class=" <%=classes%>"><%=toilet.attributes.LUIERTAFEL %></p>
 
             <a class="more" href="/toiletdetail/<%=toiletIndex %>">Meer lezen...</a>
 

@@ -3,7 +3,7 @@ var map = L.map('map', {
   zoom: 15
 });
 
-var basicmap = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+var basicmap = L.tileLayer('https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?apikey=202db2b8cca0453498c2139dc0591c9d', {
 	id: 'mapbox.streets'
 });
 
