@@ -1,5 +1,5 @@
 <% include header %>
-<% include nav %>
+
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/mapstyle.css">
 
@@ -7,7 +7,7 @@
    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
    crossorigin=""/>
 
-<h1>Kaartje</h1>
+<a href="/lijst">Meer filters en lijstweergave</a>
 
 <div id="map">
 
@@ -20,8 +20,14 @@
 
   <% for(var toiletIndex=0; toiletIndex < toiletten.length; toiletIndex++) { %>
 
-          L.marker([<%-toiletten[toiletIndex].geometry.y %>, <%-toiletten[toiletIndex].geometry.x %>]).addTo(map)
-              .bindPopup("<p class='popuptext'> Toilet: "+"<%- toiletten[toiletIndex].attributes.OMSCHRIJVING%></p><a class='leesmeer' href='/toiletten/<%=toiletIndex%>'>Lees meer over deze toilet hier!</a>")
+            var toiletpapier = L.icon({
+                iconUrl: '/images/mapicoon.png',
+
+                iconSize:     [35, 35],
+                popupAnchor:  [1, -5]
+              });
+          L.marker([<%-toiletten[toiletIndex].geometry.y %>, <%-toiletten[toiletIndex].geometry.x %>],{icon: toiletpapier}).addTo(map)
+              .bindPopup("<p class='popuptext'><a class='leesmeer' href='/toiletten/<%=toiletIndex%>'> <%- toiletten[toiletIndex].attributes.OMSCHRIJVING%></a></p>")
           <% } %>
 
 

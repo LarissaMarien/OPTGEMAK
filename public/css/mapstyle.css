@@ -1,0 +1,4 @@
+#map > div.leaflet-control-container > div.leaflet-top.leaflet-left > div > a.leaflet-control-zoom-in, #map > div.leaflet-control-container > div.leaflet-top.leaflet-left > div > a.leaflet-control-zoom-out {
+  background-color: #3383bd;
+  color: white;
+}

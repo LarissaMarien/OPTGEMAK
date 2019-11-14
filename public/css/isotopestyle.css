@@ -44,7 +44,7 @@ body {
 /* ---- isotope ---- */
 
 .grid {
-  
+
 }
 
 /* clear fix */
@@ -78,5 +78,5 @@ body {
 
 .element-item.man           { background: #F00; background: hsl(   0, 100%, 50%); }
 .element-item.vrouw         { background: #F80; background: hsl(  36, 100%, 50%); }
-.element-item.gehandicapt   { background: #FF0; background: hsl(  72, 100%, 50%); }
-.element-item.luier         { background: #0F0; background: hsl( 108, 100%, 50%); }
+.element-item.handicap   { background: #FF0; background: hsl(  72, 100%, 50%); }
+.element-item.luiertafel         { background: #0F0; background: hsl( 108, 100%, 50%); }

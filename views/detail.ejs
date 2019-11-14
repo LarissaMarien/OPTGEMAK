@@ -1,12 +1,110 @@
 <% include header %>
-<% include nav %>
+
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/detailstyle.css">
 
+<a href="javascript:history.back()">Terug</a>
+
+<div class="toiletbasis">
 
 <h1><%=toilet.attributes.OMSCHRIJVING %></h1>
 
-<p>Larissa</p>
+<p><%=toilet.attributes.STRAAT %> <%=toilet.attributes.HUISNUMMER %></p>
+<p><%=toilet.attributes.POSTCODE %>  -  <%=toilet.attributes.DISTRICT %></p>
 
+</div>
+
+<div class="toiletkenmerken">
+
+  <%
+    let man = "";
+    if (toilet.attributes.DOELGROEP == "man") {
+      man += " man ";
+    }
+    if (!toilet.attributes.DOELGROEP == "man") {
+      man += " nietman ";
+    }
+    let vrouw = "";
+    if (toilet.attributes.DOELGROEP == "vrouw") {
+      vrouw += " vrouw ";
+    }
+    if (!toilet.attributes.DOELGROEP == "vrouw") {
+      vrouw += " nietvrouw ";
+    }
+    let handicap = "";
+    if (toilet.attributes.INTEGRAAL_TOEGANKELIJK == "ja") {
+      handicap += " handicap ";
+    }
+    if (toilet.attributes.INTEGRAAL_TOEGANKELIJK == "nee") {
+      handicap += " niethandicap ";
+    }
+    let luier = "";
+    if (toilet.attributes.LUIERTAFEL == "ja") {
+      luier += " luier ";
+    }
+    if (toilet.attributes.LUIERTAFEL == "nee") {
+      luier += " nietluier ";
+    }
+    if (toilet.attributes.LUIERTAFEL == "niet van toepassing") {
+      luier += " nietluier ";
+    }
+    if (toilet.attributes.LUIERTAFEL == null) {
+      luier += " nietluier ";
+    }
+    let betalen = "";
+    if (toilet.attributes.BETALEND == "ja") {
+      betalen += " betalend ";
+    }
+    if (toilet.attributes.BETALEND == "nee") {
+      betalen += " nietbetalend ";
+    }
+    if (toilet.attributes.BETALEND == null) {
+      betalen += " nietbetalend ";
+    }
+    let  nietbetalen = "";
+    if (toilet.attributes.BETALEND == "nee") {
+       nietbetalen += " nietbetalen ";
+    }
+    if (toilet.attributes.BETALEND == "ja") {
+      nietbetalen += " betalen ";
+    }
+    %>
+
+  <img class="<%=man %>" src="/images/manicoon.png" alt="man icoon" height="40" width="40">
+  <img class="<%=vrouw %>" src="/images/vrouwicoon.png" alt="vrouw icoon" height="40" width="40">
+  <img class="<%=handicap %>" src="/images/handicapicoon.png" alt="gehandicapte icoon" height="40" width="40">
+  <img class="<%=luier %>" src="/images/luiericoon.png" alt="luiertafel icoon" height="40" width="40">
+  <img class="<%=betalen %>" src="/images/betalendicoon.png" alt="betalend icoon" height="40" width="40">
+  <img class="<%=nietbetalen %>" src="/images/nietbetalendicoon.png" alt="niet betalend icoon" height="40" width="40">
+
+
+</div>
+
+<div class="toileteigendom">
+
+<p>Stadseigendom: <%=toilet.attributes.STADSEIGENDOM %></p>
+
+</div>
+
+<div class="toiletwaar">
+
+<p>Bevindt zich in een gebouw: <%=toilet.attributes.VRIJSTAAND %></p>
+
+</div>
+
+<div class="toiletextra">
+
+  <%
+    let extraslash = "";
+    if (toilet.attributes.EXTRA_INFO_PUBLIEK === null) {
+      extraslash += " extranull ";
+    }
+    if (toilet.attributes.EXTRA_INFO_PUBLIEK !== null) {
+      extraslash += " extra ";
+    } %>
+
+<p>Extra info: <span class="<%=extraslash %>">/</span><%=toilet.attributes.EXTRA_INFO_PUBLIEK %></p>
+
+</div>
 
 <% include footer %>
