@@ -10,13 +10,13 @@ function onLocationFound(e) {
 	var radius = e.accuracy;
 
   var toiletpapier = L.icon({
-      iconUrl: '/images/logo_blauw.png',
-      iconSize:     [30, 30],
-      popupAnchor:  [-3, -8]
+      iconUrl: '/images/hiericoon.png',
+      iconSize:     [35, 35],
+      popupAnchor:  [0, -7]
     });
 
 	L.marker(e.latlng, {icon: toiletpapier}).addTo(map)
-		.bindPopup("Je bent hier!").openPopup();
+		.bindPopup("Je bevindt je hier").openPopup();
 
   L.circle(e.latlng).setRadius(500).addTo(map).bindPopup("De cirkel heeft een radius van 1KM");
 }

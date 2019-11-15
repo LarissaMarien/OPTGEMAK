@@ -6,27 +6,6 @@ var iso = new Isotope( '.grid', {
   layoutMode: 'vertical'
 });
 
-// filter functions
-/*var filterFns = {
-  // show if
-  gehandicapt: function( itemElem ) {
-    var gehandicapt = itemElem.querySelector('.gehandicapt').textContent;
-    return gehandicapt.match( /ja$/ );
-  },
-  man: function( itemElem ) {
-    var man = itemElem.querySelector('.man').textContent;
-    return man.match( / man$/ );
-  },
-  vrouw: function( itemElem ) {
-    var vrouw = itemElem.querySelector('.vrouw').textContent;
-    return vrouw.match( / vrouw$/ );
-  },
-  luier: function( itemElem ) {
-    var luier = itemElem.querySelector('.luier').textContent;
-    return luier.match( / ja$/ );
-  }
-};*/
-
 // bind filter button click
 var filtersElem = document.querySelector('.filters-button-group');
 filtersElem.addEventListener( 'click', function( event ) {
