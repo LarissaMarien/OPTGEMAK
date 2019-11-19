@@ -1,10 +1,37 @@
 * {margin: 0; padding: 0;}
 #map {
   width: 100vw;
-  height: 90vh;
+  height: 78vh;
+  overflow: hidden;
+}
 
+@font-face {
+  font-family: 'Roboto Condensed', sans-serif;
+  src: url("/fonts/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Bebas Neue Regulier';
+  src: url("/fonts/BebasNeue-Regular.ttf");
 }
 
 body {
   background-color: #f2f2f2;
+}
+
+header {
+  background-color: white;
+  height: 10vh;
+}
+
+.heading {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 17.5rem;
+  padding-top: 0.6rem;
+}
+
+.toiletrol {
+  margin-right: 2rem;
 }
