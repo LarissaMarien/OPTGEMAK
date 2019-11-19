@@ -1,3 +1,49 @@
+main {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+body > main > a {
+  display: block;
+  margin-top: 5%;
+  margin-bottom:5%;
+  width: 18%;
+  text-align: center;
+  font-family: 'Bebas Neue Regulier';
+  box-sizing: border-box;
+  background-color: #505050;
+  border-radius: 0.3em;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  padding-top: 0.6rem;
+}
+
+.toiletbasis, .toiletkenmerken, .toileteigendom, .toiletwaar, .toiletextra {
+  background-color: white;
+  padding: 1rem;
+  padding-left: 1.3rem;
+  border-radius: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.toiletbasis > h1 {
+  display: inline-block;
+  font-size: 1.3rem !important;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #6eb1c8;
+  margin-bottom: 1rem;
+  color: #3383bd;
+  font-family: 'Bebas Neue Regulier';
+}
+
+.toiletbasis > p {
+  line-height: 1.5rem;
+}
+
 .extra {
   display: none;
 }

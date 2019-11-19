@@ -4,6 +4,53 @@ body {
   font-family: sans-serif;
 }
 
+.list {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+body > div > a {
+  display: block;
+  margin-top: 5%;
+  margin-bottom:5%;
+  width: 18%;
+  text-align: center;
+  font-family: 'Bebas Neue Regulier';
+  box-sizing: border-box;
+  background-color: #505050;
+  border-radius: 0.3em;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  padding-top: 0.6rem;
+}
+
+ h1 {
+   display: inline-block;
+   font-size: 1.3rem !important;
+   text-decoration: none;
+   padding-bottom: 0.5rem;
+   border-bottom: 2px solid #6eb1c8;
+   margin-bottom: 1rem;
+   color: #3383bd;
+   font-family: 'Bebas Neue Regulier';
+ }
+
+ p {
+   color: white;
+   font-family: 'Roboto Condensed', sans-serif;
+   line-height: 1.5rem;
+ }
+
+ .more {
+   text-decoration: none;
+   color: #6eb1c8;
+   font-family: 'Roboto Condensed', sans-serif;
+   font-variant: small-caps;
+ }
+
+
 /* ---- button ---- */
 
 .button {
@@ -19,6 +66,17 @@ body {
   font-size: 16px;
   text-shadow: 0 1px white;
   cursor: pointer;
+}
+
+.button:nth-child(2) {
+  background-image: url("/images/manicoon.png");
+  back
+  height: 45px;
+  width: 45px;
+}
+
+.button-group {
+  margin-bottom: 1rem;
 }
 
 .button:hover {
@@ -60,23 +118,16 @@ body {
   position: relative;
   float: left;
   width: 95%;
-  height: 70px;
+  height: 65px;
   margin: 5px;
   padding: 10px;
-  background: #888;
+  background-color: #3383bd;
   color: #262524;
+  border-radius: 10px;
 }
 
 .element-item > * {
   margin: 0;
   padding: 0;
-}
 
-#noshow {
-  display: none;
 }
-
-.element-item.man           { background: #F00; background: hsl(   0, 100%, 50%); }
-.element-item.vrouw         { background: #F80; background: hsl(  36, 100%, 50%); }
-.element-item.handicap   { background: #FF0; background: hsl(  72, 100%, 50%); }
-.element-item.luiertafel         { background: #0F0; background: hsl( 108, 100%, 50%); }
