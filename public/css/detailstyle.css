@@ -20,7 +20,7 @@ body > main > a {
   padding-top: 0.6rem;
 }
 
-.toiletbasis, .toiletkenmerken, .toileteigendom, .toiletwaar, .toiletextra {
+.toiletbasis, .toiletkenmerken, .toileteigendom, .toiletwaar, .toiletextra, .contactbox {
   background-color: white;
   padding: 1rem;
   padding-left: 1.3rem;
@@ -29,7 +29,7 @@ body > main > a {
   margin-bottom: 1rem;
 }
 
-.toiletbasis > h1 {
+.toiletbasis > h1, .contactbox > h1 {
   display: inline-block;
   font-size: 1.3rem !important;
   text-decoration: none;
@@ -38,6 +38,10 @@ body > main > a {
   margin-bottom: 1rem;
   color: #3383bd;
   font-family: 'Bebas Neue Regulier';
+}
+
+.contactbox > p {
+  line-height: 2rem;
 }
 
 .toiletbasis > p {
