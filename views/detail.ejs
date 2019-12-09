@@ -64,6 +64,9 @@
     if (toilet.attributes.BETALEND == "te onderzoeken") {
       betalen += " nietbetalend ";
     }
+    if (toilet.attributes.BETALEND == null) {
+      betalen += " nietbetalend ";
+    }
     let  nietbetalen = "";
     if (toilet.attributes.BETALEND == "nee") {
        nietbetalen += " nietbetalen ";
@@ -71,6 +74,10 @@
     if (toilet.attributes.BETALEND == "ja") {
       nietbetalen += " betalen ";
     }
+    if (toilet.attributes.BETALEND == null) {
+      nietbetalen += " nietbetalen ";
+    }
+
     %>
 
   <img class="<%=man %>" src="/images/manicoon.png" alt="man icoon" height="45" width="45">
